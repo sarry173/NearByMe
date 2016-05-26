@@ -110,10 +110,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
                 obj.setCustomer_name(jsonObj.get("customer_name").toString());
                 obj.setLatitude(jsonObj.get("latitude").toString());
                 obj.setLongitude(jsonObj.get("longitude").toString());
-//                obj.setDistanceInKm((int) Utility.distance(location.getLatitude(), location.getLongitude(),
-//                        Double.parseDouble(obj.getLatitude()), Double.parseDouble(obj.getLongitude())));
-                obj.setDistanceInKm((int) Utility.distance(Double.parseDouble("31.518085"), Double.parseDouble("75.848710"),
+                obj.setDistanceInKm((int) Utility.distance(location.getLatitude(), location.getLongitude(),
                         Double.parseDouble(obj.getLatitude()), Double.parseDouble(obj.getLongitude())));
+//                obj.setDistanceInKm((int) Utility.distance(Double.parseDouble("31.518085"), Double.parseDouble("75.848710"),
+//                        Double.parseDouble(obj.getLatitude()), Double.parseDouble(obj.getLongitude())));
                 if (obj.getDistanceInKm() <= 100) {
                     customerBeanList.add(obj);
                 }
